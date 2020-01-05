@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "515090539535",
+    "firebase_url": "https://chimica-5d57c.firebaseio.com",
+    "project_id": "chimica-5d57c",
+    "storage_bucket": "chimica-5d57c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515090539535:android:861f0ac0dd74e3fd982f7a",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.ChimicaProject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515090539535-6pacai4ijerl8tkgajjs6f238urv8rht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrXKfY5h6UHMLFnhTopORScW69P99pf3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515090539535-6pacai4ijerl8tkgajjs6f238urv8rht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
