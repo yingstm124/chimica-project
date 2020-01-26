@@ -44,6 +44,7 @@ namespace GoogleARCore.Examples.ObjectManipulation
         /// </summary>
         public GameObject ManipulatorPrefab;
 
+        private bool spawn = false;
         /// <summary>
         /// Returns true if the manipulation can be started for the given gesture.
         /// </summary>
@@ -81,8 +82,9 @@ namespace GoogleARCore.Examples.ObjectManipulation
             TrackableHitFlags raycastFilter = TrackableHitFlags.PlaneWithinPolygon;
 
             if (Frame.Raycast(
-                gesture.StartPosition.x, gesture.StartPosition.y, raycastFilter, out hit))
+                gesture.StartPosition.x, gesture.StartPosition.y, raycastFilter, out hit) && !spawn)
             {
+                Debug.Log(gesture);
                 // Use hit pose and camera pose to check if hittest is from the
                 // back of the plane, if it is, no need to create the anchor.
                 if ((hit.Trackable is DetectedPlane) &&
@@ -93,6 +95,8 @@ namespace GoogleARCore.Examples.ObjectManipulation
                 }
                 else
                 {
+                    
+                    Debug.Log("Im add it on plane"); 
                     // Instantiate game object at the hit pose.
                     var gameObject = Instantiate(PawnPrefab, hit.Pose.position, hit.Pose.rotation);
 
@@ -113,6 +117,10 @@ namespace GoogleARCore.Examples.ObjectManipulation
                     // Select the placed object.
                     manipulator.GetComponent<Manipulator>().Select();
                 }
+            }
+            else
+            {
+                Debug.Log("Pawn Has been placed.");
             }
         }
     }
